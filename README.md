@@ -18,4 +18,4 @@ It also contains configuration to be deployed by CI/CD pipelines based on the [O
 
 ## Deploy with CI/CD pipelines
 
-Follow [this](https://github.com/redhatcsargentina/openshift-cicd-pipelines) instructions to deploy and promote the application with pipelines.
+Follow [this](https://github.com/redhatcsargentina/openshift-cicd-pipelines/tree/master/docs/demo) instructions to deploy and promote the application with pipelines.
