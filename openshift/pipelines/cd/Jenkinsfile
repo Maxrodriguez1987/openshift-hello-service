@@ -1,5 +1,5 @@
 runCDPipeline(application: env.APP_NAME,
               agent: "maven",
-              compileCommands: "./mvnw package -DskipTests; mkdir ./deploy; cp -R ./target/lib ./deploy; cp ./target/*-runner.jar ./deploy; cp -R ./.s2i ./deploy",
-              testCommands: "./mvnw test",
-              artifactsDir: "./deploy")
+              compileCommands: "mvn package -DskipTests",
+              testCommands: "mvn test",
+              artifactsDir: "./target")
