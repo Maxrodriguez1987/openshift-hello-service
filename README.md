@@ -16,6 +16,6 @@ It also contains configuration to be deployed by CI/CD pipelines based on the [O
 
     oc new-app --template=hello-service -n hello-dev
 
-## Deploy with CI/CD pipelines
+## Deploy with CI/CD pipelines
 
-Follow [this](ttps://github.com/redhatcsargentina/openshift-cicd-pipelines) instructions to deploy and promote the application with pipelines.
+Follow [this](https://github.com/redhatcsargentina/openshift-cicd-pipelines) instructions to deploy and promote the application with pipelines.
