@@ -80,11 +80,11 @@ objects:
             timeoutSeconds: 1
           resources:
             limits:
-              cpu: 200m
-              memory: 100Mi
+              cpu: 1
+              memory: 512Mi
             requests:
-              cpu: 200m
-              memory: 100Mi
+              cpu: 1
+              memory: 512Mi
           env:
           - name: HELLO_MESSAGE
             value: ${HELLO_MESSAGE}
@@ -113,6 +113,7 @@ objects:
           kind: ImageStreamTag
           name: ${APP_NAME}:latest
       type: ImageChange
+    - type: ConfigChange
 - apiVersion: v1
   kind: Service
   metadata:
@@ -156,7 +157,7 @@ parameters:
   displayName: Git Repository
   name: GIT_REPO
   required: true
-  value: ssh://git@github.com/redhatcsargentina/openshift-cicd-pipelines.git
+  value: ssh://git@github.com/redhatcsargentina/openshift-hello-service.git
 - description: Git Branch
   displayName: Git Branch
   name: GIT_BRANCH

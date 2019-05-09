@@ -6,8 +6,8 @@ spec:
       - name: hello-service
         resources:
           limits:
-            cpu: 500m
-            memory: 500Mi
+            cpu: 1
+            memory: 512Mi
           requests:
-            cpu: 500m
-            memory: 500Mi
+            cpu: 1
+            memory: 512Mi

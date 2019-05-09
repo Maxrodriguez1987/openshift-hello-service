@@ -4,7 +4,7 @@ Simple Java application that can be deployed into OpenShift.
 
 It also contains configuration to be deployed by CI/CD pipelines based on the [OpenShift CI/CD Pipelines](https://github.com/redhatcsargentina/openshift-cicd-pipelines) repository.
 
-## Deploy into OpenShift
+## Deploy into OpenShift
 
     oc new-project hello-dev
 
@@ -16,7 +16,6 @@ It also contains configuration to be deployed by CI/CD pipelines based on the [O
 
     oc new-app --template=hello-service -n hello-dev
 
-## Deploy with Pipelines
+## Deploy with CI/CD pipelines
 
-    oc new-project hello-dev
-
+Follow [this](ttps://github.com/redhatcsargentina/openshift-cicd-pipelines) instructions to deploy and promote the application with pipelines.
