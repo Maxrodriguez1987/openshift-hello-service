@@ -26,10 +26,7 @@ objects:
         kind: ImageStreamTag
         name: ${APP_NAME}:latest
     source:
-      git:
-        uri: ${GIT_REPO}
-        ref: ${GIT_BRANCH}
-      type: Git
+      type: Binary
     strategy:
       sourceStrategy:
         from:
