@@ -26,9 +26,16 @@ objects:
         kind: ImageStreamTag
         name: ${APP_NAME}:latest
     source:
-      type: Binary
+      type: source
     strategy:
-      sourceStrategy:
+      jenkinsPipelineStrategy:
+        env:
+        - name: APP_NAME
+          value: ${APP_NAME}
+        - name: OPENSHIFT_DIR
+          value: ${OPENSHIFT_DIR}
+        jenkinsfilePath: Jenkinsfile
+      type: JenkinsPipeline
         from:
           kind: ImageStreamTag
           name: redhat-openjdk18-openshift:1.2
@@ -154,7 +161,7 @@ parameters:
   displayName: Git Repository
   name: GIT_REPO
   required: true
-  value: ssh://git@github.com/redhatcsargentina/openshift-hello-service.git
+  value: http://git@github.com/redhatcsargentina/openshift-hello-service.git
 - description: Git Branch
   displayName: Git Branch
   name: GIT_BRANCH
@@ -170,3 +177,8 @@ parameters:
   description: Environment
   required: true
   value: dev
+- description: OpenShift Directory
+  displayName: OpenShift Directory
+  name: OPENSHIFT_DIR
+  value: ./openshift
+  required: true
