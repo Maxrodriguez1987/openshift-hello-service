@@ -17,11 +17,11 @@ pipeline {
                 sh("mvn package -DskipTests")
             }
         }
-        stage("Test") {
-            steps {
-                sh("mvn test")
-            }
-        }
+//        stage("Test") {
+  //          steps {
+    //            sh("mvn test")
+      //      }
+        //}
         stage("Build Image") {
             steps {
                 script {
