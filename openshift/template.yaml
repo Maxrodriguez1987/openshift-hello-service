@@ -80,10 +80,10 @@ objects:
             timeoutSeconds: 1
           resources:
             limits:
-              cpu: 1
+              cpu: 50m
               memory: 512Mi
             requests:
-              cpu: 1
+              cpu: 50m
               memory: 512Mi
           env:
           - name: HELLO_MESSAGE
